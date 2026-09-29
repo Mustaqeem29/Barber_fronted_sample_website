@@ -1,0 +1,1383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Crown & Blade - Premium Gentlemen's Barbershop. Precision haircuts, artisanal beard grooming, and hot towel straight razor shaves in a luxurious modern dark & gold sanctuary.">
+  <meta name="keywords" content="barbershop, men's haircut, skin fade, beard grooming, hot towel shave, luxury barber, hair styling">
+  <meta name="author" content="The Crown & Blade Barbershop">
+  <title>The Crown & Blade | Premium Gentlemen's Barbershop & Grooming Lounge</title>
+
+  <!-- Google Fonts: Cormorant Garamond for luxury titles + Plus Jakarta Sans for sleek modern UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==============================================
+       TOP NOTIFICATION BAR (Business Hours & Live Status)
+       ============================================== -->
+  <div class="top-announcement-bar">
+    <div class="container top-bar-content">
+      <div class="top-info-item">
+        <span class="live-dot" id="liveStatusDot"></span>
+        <span id="liveStatusText">Checking shop status...</span>
+      </div>
+      <div class="top-info-item hide-mobile">
+        <span class="gold-icon">📍</span>
+        <span>128 Grand Boulevard, Suite 400 • Downtown</span>
+      </div>
+      <div class="top-info-item">
+        <span class="gold-icon">📞</span>
+        <a href="tel:+1234567890" class="top-phone">+1 (234) 567-890</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==============================================
+       NAVIGATION BAR
+       ============================================== -->
+  <header class="site-header" id="siteHeader">
+    <nav class="container navbar">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="The Crown and Blade Homepage">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="6" cy="6" r="3"></circle>
+            <circle cx="6" cy="18" r="3"></circle>
+            <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+            <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+            <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-title">CROWN & BLADE</span>
+          <span class="logo-subtitle">BARBERSHOP & LOUNGE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#barbers" class="nav-link">Barbers</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#pricing" class="nav-link">Pricing</a></li>
+        <li><a href="#reviews" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Header Action Buttons -->
+      <div class="header-actions">
+        <a href="#booking" class="btn btn-gold header-book-btn">
+          <span class="btn-text">Book Appointment</span>
+          <span class="btn-icon">→</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-header">
+      <div class="logo-text">
+        <span class="logo-title">CROWN & BLADE</span>
+        <span class="logo-subtitle">BARBERSHOP</span>
+      </div>
+      <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+      <li><a href="#barbers" class="mobile-nav-link">Our Barbers</a></li>
+      <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+      <li><a href="#pricing" class="mobile-nav-link">Pricing Menu</a></li>
+      <li><a href="#reviews" class="mobile-nav-link">Client Reviews</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact & Location</a></li>
+    </ul>
+    <div class="mobile-drawer-footer">
+      <a href="#booking" class="btn btn-gold btn-block mobile-drawer-cta">Book Appointment Now</a>
+      <a href="https://wa.me/1234567890?text=Hello%20Crown%20%26%20Blade%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-outline btn-block">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <main>
+    <!-- ==============================================
+         HERO SECTION
+         ============================================== -->
+    <section class="hero-section" id="home">
+      <div class="hero-geometric-pattern"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-star">★</span>
+            <span>PREMIUM BESPOKE GROOMING</span>
+            <span class="badge-star">★</span>
+          </div>
+
+          <h1 class="hero-title">
+            Artisanship & Distinction For The <span class="gold-gradient-text">Modern Gentleman</span>
+          </h1>
+
+          <p class="hero-lead">
+            Step into a refined dark & gold sanctuary. Where traditional barbering precision meets contemporary elegance—featuring master fade work, handcrafted beard sculpting, and restorative hot towel shaves.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#booking" class="btn btn-gold btn-lg">
+              <span>Book Your Appointment</span>
+              <span class="btn-arrow">⚡</span>
+            </a>
+            <a href="#services" class="btn btn-outline btn-lg">
+              <span>Explore Services</span>
+            </a>
+          </div>
+
+          <!-- Social Proof Highlights -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.9<span class="stat-gold">★</span></span>
+              <span class="stat-label">500+ Google Reviews</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">10<span class="stat-gold">+</span></span>
+              <span class="stat-label">Years of Craftsmanship</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">15K<span class="stat-gold">+</span></span>
+              <span class="stat-label">Gentlemen Groomed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-card-frame">
+            <div class="gold-corner top-left"></div>
+            <div class="gold-corner top-right"></div>
+            <div class="gold-corner bottom-left"></div>
+            <div class="gold-corner bottom-right"></div>
+            
+            <div class="hero-image-wrapper">
+              <img src="images/barber-action.png" alt="Barbers cutting hair inside our luxury modern salon" class="hero-img">
+              <div class="hero-img-overlay"></div>
+            </div>
+
+            <!-- Floating VIP Badge -->
+            <div class="floating-badge floating-badge-top">
+              <div class="badge-icon-wrap">✂️</div>
+              <div class="badge-details">
+                <span class="badge-title">Master Craftsmen</span>
+                <span class="badge-desc">Precision line-up & custom scissor work</span>
+              </div>
+            </div>
+
+            <!-- Floating Lounge Badge -->
+            <div class="floating-badge floating-badge-bottom">
+              <div class="badge-icon-wrap">☕</div>
+              <div class="badge-details">
+                <span class="badge-title">VIP Lounge Experience</span>
+                <span class="badge-desc">Complimentary espresso & whiskey</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         WHY CHOOSE US / VALUE PILLARS
+         ============================================== -->
+    <section class="features-bar">
+      <div class="container features-grid">
+        <div class="feature-item">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#D4AF37" stroke-width="1.8">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+          <div class="feature-info">
+            <h3 class="feature-title">Master Precision</h3>
+            <p class="feature-desc">Award-winning barbers trained in classic and modern fading techniques.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#D4AF37" stroke-width="1.8">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="feature-info">
+            <h3 class="feature-title">Guaranteed On-Time</h3>
+            <p class="feature-desc">Respect for your schedule. Zero waiting delays with our reserved slots.</p>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon-box">
+            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="#D4AF37" stroke-width="1.8">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+          </div>
+          <div class="feature-info">
+            <h3 class="feature-title">Artisan Grooming</h3>
+            <p class="feature-desc">Premium organic pomades, beard oils, and soothing essential hot towels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SERVICES SECTION
+         ============================================== -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">TAILORED CARE</span>
+          <h2 class="section-title">Our Premium <span class="gold-gradient-text">Grooming Services</span></h2>
+          <div class="section-gold-line"></div>
+          <p class="section-subtitle">
+            Every session includes a one-on-one personal consultation, complimentary premium drink, relaxing scalp massage, and precision styling.
+          </p>
+        </div>
+
+        <!-- Service Category Tabs -->
+        <div class="services-filter-tabs">
+          <button class="filter-tab active" data-filter="all">All Services</button>
+          <button class="filter-tab" data-filter="haircuts">Haircuts & Fades</button>
+          <button class="filter-tab" data-filter="beards">Beard & Shaves</button>
+          <button class="filter-tab" data-filter="combos">Signature Combos</button>
+          <button class="filter-tab" data-filter="treatments">VIP Treatments</button>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="services-grid" id="servicesGrid">
+          
+          <!-- Service Card 1 -->
+          <article class="service-card" data-category="haircuts">
+            <div class="service-card-top">
+              <span class="service-badge">SIGNATURE</span>
+              <span class="service-duration">⏱ 45 mins</span>
+            </div>
+            <h3 class="service-name">Gentleman's Signature Cut</h3>
+            <p class="service-desc">Tailored precision scissor & clipper cut, tailored fade or classic taper, razor neck shave, invigorating wash, and matte styling.</p>
+            <ul class="service-features">
+              <li>✓ Personalized hair consultation</li>
+              <li>✓ Straight-razor neck cleanup</li>
+              <li>✓ Hot towel refresh & blow dry</li>
+            </ul>
+            <div class="service-card-footer">
+              <div class="service-price">
+                <span class="currency">$</span><span class="amount">45</span>
+              </div>
+              <button class="btn btn-gold-sm book-this-service" data-service="Gentleman's Signature Cut ($45)">
+                Select Service
+              </button>
+            </div>
+          </article>
+
+          <!-- Service Card 2 -->
+          <article class="service-card featured-service" data-category="haircuts">
+            <div class="service-card-top">
+              <span class="service-badge gold-bg">MOST POPULAR</span>
+              <span class="service-duration">⏱ 50 mins</span>
+            </div>
+            <h3 class="service-name">Master Skin Fade & Lineup</h3>
+            <p class="service-desc">Flawless seamless skin fade (low, mid, high, or taper) with razor-sharp hairline perimeter edging and custom pomade finish.</p>
+            <ul class="service-features">
+              <li>✓ Foil shaver ultra-close blend</li>
+              <li>✓ Razor-edged perimeter alignment</li>
+              <li>✓ Cooling tea tree scalp finish</li>
+            </ul>
+            <div class="service-card-footer">
+              <div class="service-price">
+                <span class="currency">$</span><span class="amount">50</span>
+              </div>
+              <button class="btn btn-gold-sm book-this-service" data-service="Master Skin Fade & Lineup ($50)">
+                Select Service
+              </button>
+            </div>
+          </article>
+
+          <!-- Service Card 3 -->
+          <article class="service-card" data-category="beards">
+            <div class="service-card-top">
+              <span class="service-badge">ARTISAN</span>
+              <span class="service-duration">⏱ 35 mins</span>
+            </div>
+            <h3 class="service-name">Beard Sculpt & Razor Detailing</h3>
+            <p class="service-desc">Complete beard architectural shaping, clipper tapering, straight razor cheek and neck lines, hot towel and cedarwood conditioning oil.</p>
+            <ul class="service-features">
+              <li>✓ Symmetry facial sculpting</li>
+              <li>✓ Japanese steel straight razor lines</li>
+              <li>✓ Warm beard balm treatment</li>
+            </ul>
+            <div class="service-card-footer">
+              <div class="service-price">
+                <span class="currency">$</span><span class="amount">35</span>
+              </div>
+              <button class="btn btn-gold-sm book-this-service" data-service="Beard Sculpt & Razor Detailing ($35)">
+                Select Service
+              </button>
+            </div>
+          </article>
+
+          <!-- Service Card 4 -->
+          <article class="service-card" data-category="beards">
+            <div class="service-card-top">
+              <span class="service-badge">TRADITIONAL</span>
+              <span class="service-duration">⏱ 45 mins</span>
+            </div>
+            <h3 class="service-name">Royal Hot Towel Shave</h3>
+            <p class="service-desc">The authentic barbershop ritual. Pre-shave organic essential oils, multiple steaming hot towels, warm badger lather, and double shave.</p>
+            <ul class="service-features">
+              <li>✓ Dual steaming essential hot towels</li>
+              <li>✓ Ultra-close straight blade shave</li>
+              <li>✓ Cold towel pore seal & aftershave</li>
+            </ul>
+            <div class="service-card-footer">
+              <div class="service-price">
+                <span class="currency">$</span><span class="amount">45</span>
+              </div>
+              <button class="btn btn-gold-sm book-this-service" data-service="Royal Hot Towel Shave ($45)">
+                Select Service
+              </button>
+            </div>
+          </article>
+
+          <!-- Service Card 5 -->
+          <article class="service-card featured-service" data-category="combos">
+            <div class="service-card-top">
+              <span class="service-badge gold-bg">VIP BESTSELLER</span>
+              <span class="service-duration">⏱ 75 mins</span>
+            </div>
+            <h3 class="service-name">The Crown Executive Package</h3>
+            <p class="service-desc">Our flagship transformation. Master haircut or fade, comprehensive beard sculpt with straight-razor detailing, hot towel ritual, and shampoo.</p>
+            <ul class="service-features">
+              <li>✓ Full Signature Cut / Skin Fade</li>
+              <li>✓ Complete Beard Sculpt & Hot Towel</li>
+              <li>✓ Complimentary whiskey or espresso</li>
+            </ul>
+            <div class="service-card-footer">
+              <div class="service-price">
+                <span class="currency">$</span><span class="amount">75</span>
+              </div>
+              <button class="btn btn-gold-sm book-this-service" data-service="The Crown Executive Package ($75)">
+                Select Service
+              </button>
+            </div>
+          </article>
+
+          <!-- Service Card 6 -->
+          <article class="service-card" data-category="treatments">
+            <div class="service-card-top">
+              <span class="service-badge">REVITALIZING</span>
+              <span class="service-duration">⏱ 30 mins</span>
+            </div>
+            <h3 class="service-name">Charcoal Facial & Scalp Detox</h3>
+            <p class="service-desc">Deep-cleansing activated charcoal mask, warm botanical steam, blackhead purification, and tension-melting shoulder and scalp massage.</p>
+            <ul class="service-features">
+              <li>✓ Deep pore extraction & mask</li>
+              <li>✓ Botanical facial steam</li>
+              <li>✓ Relaxing acupressure massage</li>
+            </ul>
+            <div class="service-card-footer">
+              <div class="service-price">
+                <span class="currency">$</span><span class="amount">40</span>
+              </div>
+              <button class="btn btn-gold-sm book-this-service" data-service="Charcoal Facial & Scalp Detox ($40)">
+                Select Service
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="services-cta-box">
+          <div class="services-cta-text">
+            <h4>Need a tailored consultation or special event styling?</h4>
+            <p>We accommodate wedding parties, private lounge bookings, and photo shoot prep.</p>
+          </div>
+          <div class="services-cta-actions">
+            <a href="#booking" class="btn btn-gold">Book Your Session</a>
+            <a href="https://wa.me/1234567890?text=Hi%2C%20I%20have%20a%20question%20about%20your%20services%20and%20group%20bookings." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-outline">
+              WhatsApp Inquiry
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         ABOUT US SECTION
+         ============================================== -->
+    <section class="section about-section" id="about">
+      <div class="container about-container">
+        
+        <!-- About Left Visual Collage -->
+        <div class="about-visuals">
+          <div class="about-main-image-wrap">
+            <img src="images/interior-lounge.png" alt="Our premium barbershop waiting lounge with leather sofa and geometric wall" class="about-main-img">
+            <div class="about-experience-badge">
+              <span class="badge-num">10+</span>
+              <span class="badge-sub">Years of Excellence</span>
+            </div>
+          </div>
+          <div class="about-sub-image-wrap">
+            <img src="images/barber-action.png" alt="Master barber styling hair under warm lighting" class="about-sub-img">
+          </div>
+          <div class="about-gold-accent-box"></div>
+        </div>
+
+        <!-- About Right Content -->
+        <div class="about-content">
+          <span class="section-tag">OUR HERITAGE</span>
+          <h2 class="section-title">Where Tradition Meets <span class="gold-gradient-text">Modern Elegance</span></h2>
+          <div class="section-gold-line align-left"></div>
+          
+          <p class="about-text-lead">
+            Founded with a passion for time-honored barbering, <strong>The Crown & Blade</strong> was designed to redefine the grooming experience for the modern man.
+          </p>
+          
+          <p class="about-text-body">
+            From our handcrafted geometric accent walls and plush tufted leather lounge to the warm glow of our backlit stations, every detail has been purposefully curated. We believe a haircut is not merely maintenance—it is a confidence ritual and a statement of your personal standard.
+          </p>
+
+          <!-- Core Values Checklist -->
+          <div class="about-pillars">
+            <div class="pillar-item">
+              <div class="pillar-icon">✂️</div>
+              <div class="pillar-info">
+                <h4>Master Hand Craftsmanship</h4>
+                <p>No rushed cuts. Each guest receives undivided focus and personalized technique.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">🏛️</div>
+              <div class="pillar-info">
+                <h4>Luxury Ambiance & Comfort</h4>
+                <p>Relax in our executive lounge with high-speed Wi-Fi and complimentary beverages.</p>
+              </div>
+            </div>
+
+            <div class="pillar-item">
+              <div class="pillar-icon">🧪</div>
+              <div class="pillar-info">
+                <h4>Pure Artisanal Formulations</h4>
+                <p>We use solely paraben-free pomades, natural beard elixirs, and soothing botanical tonics.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta">
+            <a href="#booking" class="btn btn-gold">Experience It Yourself</a>
+            <a href="#gallery" class="btn btn-outline">Tour The Lounge</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==============================================
+         BARBERS / TEAM SECTION
+         ============================================== -->
+    <section class="section barbers-section" id="barbers">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">ARTISANS OF THE BLADE</span>
+          <h2 class="section-title">Meet Our <span class="gold-gradient-text">Master Barbers</span></h2>
+          <div class="section-gold-line"></div>
+          <p class="section-subtitle">
+            Our team blends decades of combined mastery, ongoing international education, and unmatched precision to deliver your signature look.
+          </p>
+        </div>
+
+        <div class="barbers-grid">
+          
+          <!-- Barber 1 -->
+          <div class="barber-card">
+            <div class="barber-img-container">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=80" alt="Marcus Vance - Master Barber & Founder" class="barber-img">
+              <div class="barber-socials">
+                <span class="barber-badge-exp">12 Yrs Exp</span>
+              </div>
+            </div>
+            <div class="barber-details">
+              <span class="barber-role">FOUNDER & MASTER BARBER</span>
+              <h3 class="barber-name">Marcus Vance</h3>
+              <p class="barber-bio">Specializing in classic gentleman shears, architectural fades, and signature beard geometry. Renowned for exacting detail.</p>
+              <div class="barber-specialties">
+                <span class="spec-tag">Scissor Work</span>
+                <span class="spec-tag">Skin Fades</span>
+                <span class="spec-tag">Beard Sculpt</span>
+              </div>
+              <button class="btn btn-outline-gold-sm book-with-barber" data-barber="Marcus Vance (Master Barber)">
+                Book with Marcus
+              </button>
+            </div>
+          </div>
+
+          <!-- Barber 2 -->
+          <div class="barber-card">
+            <div class="barber-img-container">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="David Sterling - Senior Fade Specialist" class="barber-img">
+              <div class="barber-socials">
+                <span class="barber-badge-exp">9 Yrs Exp</span>
+              </div>
+            </div>
+            <div class="barber-details">
+              <span class="barber-role">SENIOR FADE SPECIALIST</span>
+              <h3 class="barber-name">David Sterling</h3>
+              <p class="barber-bio">Master of tapers, drop fades, and modern textured crops. Passionate about hair movement and effortless styling.</p>
+              <div class="barber-specialties">
+                <span class="spec-tag">Tapers & Drops</span>
+                <span class="spec-tag">Textured Crops</span>
+                <span class="spec-tag">Styling Advice</span>
+              </div>
+              <button class="btn btn-outline-gold-sm book-with-barber" data-barber="David Sterling (Senior Stylist)">
+                Book with David
+              </button>
+            </div>
+          </div>
+
+          <!-- Barber 3 -->
+          <div class="barber-card">
+            <div class="barber-img-container">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" alt="Kareem Harris - Traditional Shave Artist" class="barber-img">
+              <div class="barber-socials">
+                <span class="barber-badge-exp">8 Yrs Exp</span>
+              </div>
+            </div>
+            <div class="barber-details">
+              <span class="barber-role">SHAVE & BEARD ARTISAN</span>
+              <h3 class="barber-name">Kareem Harris</h3>
+              <p class="barber-bio">Certified master of the straight-razor hot towel ritual, facial treatments, and meticulous beard shaping that fits your facial structure.</p>
+              <div class="barber-specialties">
+                <span class="spec-tag">Straight Razor</span>
+                <span class="spec-tag">Hot Towel Ritual</span>
+                <span class="spec-tag">Facial Therapy</span>
+              </div>
+              <button class="btn btn-outline-gold-sm book-with-barber" data-barber="Kareem Harris (Shave Artisan)">
+                Book with Kareem
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         GALLERY SECTION WITH FILTER & LIGHTBOX
+         ============================================== -->
+    <section class="section gallery-section" id="gallery">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">OUR CRAFT IN ACTION</span>
+          <h2 class="section-title">The Crown <span class="gold-gradient-text">Lookbook & Studio</span></h2>
+          <div class="section-gold-line"></div>
+          <p class="section-subtitle">
+            Explore snapshots of our real studio interior, lounge, signature cuts, and the meticulous care behind every transformation.
+          </p>
+        </div>
+
+        <!-- Gallery Filters -->
+        <div class="gallery-filters">
+          <button class="gallery-filter-btn active" data-category="all">All Photos</button>
+          <button class="gallery-filter-btn" data-category="interior">Studio & Lounge</button>
+          <button class="gallery-filter-btn" data-category="cuts">Precision Cuts</button>
+          <button class="gallery-filter-btn" data-category="beards">Beard & Shave</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <!-- Item 1: User's Salon Photo (Lounge) -->
+          <div class="gallery-item" data-category="interior">
+            <div class="gallery-img-box">
+              <img src="images/interior-lounge.png" alt="Executive waiting lounge with tufted sofa and geometric accent wall" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <span class="gallery-category">Studio Interior</span>
+                  <h4 class="gallery-item-title">Executive Reception & Lounge</h4>
+                  <span class="view-btn">🔍 Enlarge View</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: User's Salon Photo (Barber in action) -->
+          <div class="gallery-item" data-category="cuts">
+            <div class="gallery-img-box">
+              <img src="images/barber-action.png" alt="Master barber styling client under illuminated mirrors" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <span class="gallery-category">Live Styling</span>
+                  <h4 class="gallery-item-title">Master Styling Station</h4>
+                  <span class="view-btn">🔍 Enlarge View</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: Fade Haircut -->
+          <div class="gallery-item" data-category="cuts">
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80" alt="Seamless skin fade with textured crop on dark background" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <span class="gallery-category">Precision Cuts</span>
+                  <h4 class="gallery-item-title">Mid-Skin Fade with Textured Top</h4>
+                  <span class="view-btn">🔍 Enlarge View</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Beard Grooming & Shave -->
+          <div class="gallery-item" data-category="beards">
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80" alt="Beard trim and luxury hot towel straight razor shave" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <span class="gallery-category">Beard & Shave</span>
+                  <h4 class="gallery-item-title">Artisan Straight Razor Lineup</h4>
+                  <span class="view-btn">🔍 Enlarge View</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5: High-end Barber Tools -->
+          <div class="gallery-item" data-category="interior">
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1593702295094-aea22597af65?auto=format&fit=crop&w=800&q=80" alt="Gold and black professional shears and clippers on dark marble" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <span class="gallery-category">Studio Equipment</span>
+                  <h4 class="gallery-item-title">Precision Gold Cutting Tools</h4>
+                  <span class="view-btn">🔍 Enlarge View</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 6: Classic Haircut Pompadour -->
+          <div class="gallery-item" data-category="cuts">
+            <div class="gallery-img-box">
+              <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80" alt="Sharp gentleman pompadour hairstyle and fade" class="gallery-img">
+              <div class="gallery-overlay">
+                <div class="gallery-info">
+                  <span class="gallery-category">Precision Cuts</span>
+                  <h4 class="gallery-item-title">Classic Taper & Pompadour</h4>
+                  <span class="view-btn">🔍 Enlarge View</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Modal for Gallery Preview -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close image preview">&times;</button>
+      <div class="lightbox-content">
+        <img src="" alt="Enlarged gallery preview" class="lightbox-img" id="lightboxImg">
+        <div class="lightbox-caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         PRICING MENU / PACKAGES SECTION
+         ============================================== -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">HONEST & TRANSPARENT</span>
+          <h2 class="section-title">The Complete <span class="gold-gradient-text">Service Menu</span></h2>
+          <div class="section-gold-line"></div>
+          <p class="section-subtitle">
+            Premium service, straightforward pricing. No hidden fees or surprise upcharges.
+          </p>
+        </div>
+
+        <div class="pricing-board-wrap">
+          <div class="pricing-board">
+            
+            <!-- Column 1: Hair & Cuts -->
+            <div class="pricing-column">
+              <div class="column-header">
+                <span class="col-icon">✂️</span>
+                <h3 class="col-title">Hair & Styling</h3>
+              </div>
+              <div class="pricing-list">
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Gentleman's Signature Cut</span>
+                    <span class="item-desc">Consultation, wash, cut, hot neck shave</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$45</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Skin Fade & Razor Edge</span>
+                    <span class="item-desc">Zero/foil fade, clean hairline perimeter</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$50</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Buzz Cut & Taper Clean</span>
+                    <span class="item-desc">Uniform clipper length + razor lineup</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$30</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Young Gentleman (Under 14)</span>
+                    <span class="item-desc">Age-appropriate modern cut and styling</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$35</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 2: Beards & Shaving -->
+            <div class="pricing-column">
+              <div class="column-header">
+                <span class="col-icon">🪒</span>
+                <h3 class="col-title">Beards & Shaving</h3>
+              </div>
+              <div class="pricing-list">
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Beard Trim & Edge Detailing</span>
+                    <span class="item-desc">Clipper shaping, razor neck lines, oil</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$35</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Royal Hot Towel Shave</span>
+                    <span class="item-desc">Pre-shave oil, 3 steaming towels, straight blade</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$45</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Mustache Styling & Lineup</span>
+                    <span class="item-desc">Precision scissors, wax shaping, razor contour</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$20</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Beard Color & Grey Camo</span>
+                    <span class="item-desc">Natural semi-permanent tone enhancement</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag">$35</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Column 3: VIP Combos & Spa -->
+            <div class="pricing-column highlight-column">
+              <div class="vip-ribbon">POPULAR VALUE</div>
+              <div class="column-header">
+                <span class="col-icon">👑</span>
+                <h3 class="col-title">VIP Experiences</h3>
+              </div>
+              <div class="pricing-list">
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">The Crown Executive</span>
+                    <span class="item-desc">Cut + Beard Sculpt + Hot Towel + Shampoo</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag gold">$75</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">The Grand Royal Ritual</span>
+                    <span class="item-desc">Full Cut + Hot Towel Shave + Charcoal Facial</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag gold">$95</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Father & Son Combo</span>
+                    <span class="item-desc">Two signature cuts + styling for both</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag gold">$70</div>
+                </div>
+
+                <div class="price-row">
+                  <div class="price-left">
+                    <span class="item-name">Groom's Wedding Day Prep</span>
+                    <span class="item-desc">Cut, beard detailing, facial, and drink service</span>
+                  </div>
+                  <div class="price-dots"></div>
+                  <div class="price-tag gold">$120</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pricing-footer-note">
+            <p>All prices include complimentary beverage service, scalp tonic refresh, and neck taper clean-up.</p>
+            <a href="#booking" class="btn btn-gold">Lock in Your Time Slot</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         TESTIMONIALS / REVIEWS SECTION
+         ============================================== -->
+    <section class="section reviews-section" id="reviews">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">TESTED & TRUSTED</span>
+          <h2 class="section-title">Words From Our <span class="gold-gradient-text">Distinguished Guests</span></h2>
+          <div class="section-gold-line"></div>
+          <p class="section-subtitle">
+            Read authentic testimonials from gentlemen who rely on The Crown & Blade for their grooming rituals.
+          </p>
+        </div>
+
+        <div class="reviews-grid">
+          
+          <!-- Review 1 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "Hands down the finest barber shop in the city. The dark gold atmosphere and the leather lounge are immaculate. Marcus gave me the cleanest taper fade I've ever had in 10 years. Worth every penny."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">JL</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Julian Lawrence</span>
+                <span class="reviewer-service">Customer • Skin Fade & Beard Sculpt</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="review-card featured-review">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "The royal hot towel shave with Kareem is an experience every man needs to experience. The attention to detail, warm lather, and cooling aftershave balm left my skin smooth with zero razor burn."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">AS</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Alexander Sterling</span>
+                <span class="reviewer-service">Customer • Royal Hot Towel Shave</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">
+              "Booked the Crown Executive before my wedding. The barbers here are true craftsmen who treat barbering as an art form. My groomsmen and I had a fantastic time in the private lounge."
+            </p>
+            <div class="reviewer-meta">
+              <div class="reviewer-avatar">ER</div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">Ethan Ramirez</span>
+                <span class="reviewer-service">Customer • The Crown Executive Package</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Google Rating Badge Bar -->
+        <div class="review-aggregate-bar">
+          <div class="aggregate-left">
+            <span class="google-g">G</span>
+            <div>
+              <div class="agg-rating"><strong>4.9 / 5.0</strong> Rating on Google Reviews</div>
+              <div class="agg-count">Over 520+ verified 5-star customer ratings</div>
+            </div>
+          </div>
+          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline-gold-sm">
+            Read All Reviews on Google ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         BOOK APPOINTMENT SECTION (CORE FUNCTIONALITY)
+         ============================================== -->
+    <section class="section booking-section" id="booking">
+      <div class="container">
+        
+        <div class="booking-wrapper">
+          
+          <!-- Booking Left Column: Info & WhatsApp Quick Action -->
+          <div class="booking-info-panel">
+            <span class="section-tag">EFFORTLESS RESERVATION</span>
+            <h2 class="booking-panel-title">Reserve Your <br><span class="gold-gradient-text">Barber Chair</span></h2>
+            <div class="section-gold-line align-left"></div>
+            
+            <p class="booking-panel-lead">
+              Appointments are strictly held to guarantee zero waiting time. Select your barber, desired service, and preferred time slot.
+            </p>
+
+            <div class="booking-perks">
+              <div class="perk-row">
+                <span class="perk-icon">✓</span>
+                <span>Immediate digital confirmation</span>
+              </div>
+              <div class="perk-row">
+                <span class="perk-icon">✓</span>
+                <span>Free cancellation up to 2 hours prior</span>
+              </div>
+              <div class="perk-row">
+                <span class="perk-icon">✓</span>
+                <span>Complimentary cold brew or single malt whiskey</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp Direct Card -->
+            <div class="whatsapp-direct-card">
+              <div class="wa-icon-large">💬</div>
+              <div class="wa-content">
+                <h4>Prefer Instant WhatsApp Booking?</h4>
+                <p>Send a pre-formatted direct WhatsApp message to our concierge desk right now.</p>
+                <button type="button" class="btn btn-whatsapp btn-block" id="directWhatsAppBtn">
+                  <span>Chat & Book on WhatsApp</span>
+                  <span class="wa-arrow">📲</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="booking-direct-contact">
+              <span>Need help? Call our front desk:</span>
+              <a href="tel:+1234567890" class="direct-phone-link">+1 (234) 567-890</a>
+            </div>
+          </div>
+
+          <!-- Booking Right Column: Interactive Form -->
+          <div class="booking-form-panel">
+            <div class="form-header">
+              <h3 class="form-title">Appointment Details</h3>
+              <span class="form-step-badge">Step 1 of 1</span>
+            </div>
+
+            <form id="appointmentForm" class="appointment-form" novalidate>
+              
+              <!-- Row 1: Name and Phone -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="clientName">Full Name <span class="required-asterisk">*</span></label>
+                  <div class="input-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="clientName" name="clientName" placeholder="e.g. Alexander Vance" required>
+                  </div>
+                  <span class="error-msg" id="nameError">Please enter your full name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="clientPhone">Phone Number <span class="required-asterisk">*</span></label>
+                  <div class="input-wrapper">
+                    <span class="input-icon">📞</span>
+                    <input type="tel" id="clientPhone" name="clientPhone" placeholder="e.g. (555) 234-5678" required>
+                  </div>
+                  <span class="error-msg" id="phoneError">Please provide a valid phone number.</span>
+                </div>
+              </div>
+
+              <!-- Row 2: Email and Barber -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="clientEmail">Email Address <span class="required-asterisk">*</span></label>
+                  <div class="input-wrapper">
+                    <span class="input-icon">✉️</span>
+                    <input type="email" id="clientEmail" name="clientEmail" placeholder="e.g. alexander@example.com" required>
+                  </div>
+                  <span class="error-msg" id="emailError">Please enter a valid email address.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="barberSelect">Preferred Barber <span class="required-asterisk">*</span></label>
+                  <div class="input-wrapper">
+                    <span class="input-icon">✂️</span>
+                    <select id="barberSelect" name="barberSelect" required>
+                      <option value="" disabled selected>Choose a barber...</option>
+                      <option value="Marcus Vance (Master Barber)">Marcus Vance — Master Barber & Founder</option>
+                      <option value="David Sterling (Senior Stylist)">David Sterling — Senior Fade Specialist</option>
+                      <option value="Kareem Harris (Shave Artisan)">Kareem Harris — Shave & Beard Artisan</option>
+                      <option value="First Available Master Barber">First Available Master Barber</option>
+                    </select>
+                  </div>
+                  <span class="error-msg" id="barberError">Please select a barber or first available.</span>
+                </div>
+              </div>
+
+              <!-- Row 3: Service Selection -->
+              <div class="form-group">
+                <label for="serviceSelect">Service Desired <span class="required-asterisk">*</span></label>
+                <div class="input-wrapper">
+                  <span class="input-icon">💈</span>
+                  <select id="serviceSelect" name="serviceSelect" required>
+                    <option value="" disabled selected>Choose a service package...</option>
+                    <optgroup label="Haircuts & Fades">
+                      <option value="Gentleman's Signature Cut ($45)">Gentleman's Signature Cut — $45 (45 min)</option>
+                      <option value="Master Skin Fade & Lineup ($50)">Master Skin Fade & Lineup — $50 (50 min)</option>
+                      <option value="Buzz Cut & Taper Clean ($30)">Buzz Cut & Taper Clean — $30 (30 min)</option>
+                    </optgroup>
+                    <optgroup label="Beards & Shaving">
+                      <option value="Beard Sculpt & Razor Detailing ($35)">Beard Sculpt & Razor Detailing — $35 (35 min)</option>
+                      <option value="Royal Hot Towel Shave ($45)">Royal Hot Towel Shave — $45 (45 min)</option>
+                      <option value="Mustache Styling & Lineup ($20)">Mustache Styling & Lineup — $20 (20 min)</option>
+                    </optgroup>
+                    <optgroup label="Signature Packages & Combos">
+                      <option value="The Crown Executive Package ($75)">The Crown Executive Package (Cut + Beard) — $75 (75 min)</option>
+                      <option value="The Grand Royal Ritual ($95)">The Grand Royal Ritual (Cut + Shave + Facial) — $95 (90 min)</option>
+                      <option value="Father & Son Combo ($70)">Father & Son Combo — $70 (60 min)</option>
+                    </optgroup>
+                    <optgroup label="Treatments">
+                      <option value="Charcoal Facial & Scalp Detox ($40)">Charcoal Facial & Scalp Detox — $40 (30 min)</option>
+                    </optgroup>
+                  </select>
+                </div>
+                <span class="error-msg" id="serviceError">Please choose a service.</span>
+              </div>
+
+              <!-- Row 4: Date and Time Slot -->
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="bookingDate">Appointment Date <span class="required-asterisk">*</span></label>
+                  <div class="input-wrapper">
+                    <span class="input-icon">📅</span>
+                    <input type="date" id="bookingDate" name="bookingDate" required>
+                  </div>
+                  <span class="error-msg" id="dateError">Please choose a date from today onwards.</span>
+                </div>
+
+                <div class="form-group">
+                  <label>Select Time Slot <span class="required-asterisk">*</span></label>
+                  <input type="hidden" id="selectedTimeSlot" name="selectedTimeSlot" required>
+                  
+                  <div class="time-slots-container" id="timeSlotsContainer">
+                    <button type="button" class="time-slot-btn" data-time="09:30 AM">09:30 AM</button>
+                    <button type="button" class="time-slot-btn" data-time="10:30 AM">10:30 AM</button>
+                    <button type="button" class="time-slot-btn" data-time="11:30 AM">11:30 AM</button>
+                    <button type="button" class="time-slot-btn" data-time="01:00 PM">01:00 PM</button>
+                    <button type="button" class="time-slot-btn" data-time="02:30 PM">02:30 PM</button>
+                    <button type="button" class="time-slot-btn" data-time="04:00 PM">04:00 PM</button>
+                    <button type="button" class="time-slot-btn" data-time="05:30 PM">05:30 PM</button>
+                    <button type="button" class="time-slot-btn" data-time="07:00 PM">07:00 PM</button>
+                  </div>
+                  <span class="error-msg" id="timeError">Please pick a time slot.</span>
+                </div>
+              </div>
+
+              <!-- Row 5: Notes -->
+              <div class="form-group">
+                <label for="clientNotes">Special Requests / Notes (Optional)</label>
+                <textarea id="clientNotes" name="clientNotes" rows="3" placeholder="Tell us if you have any hair sensitivity, styling preference, or request a specific beverage..."></textarea>
+              </div>
+
+              <!-- Submit Buttons Group -->
+              <div class="booking-submit-group">
+                <button type="submit" class="btn btn-gold btn-block btn-lg" id="submitBookingBtn">
+                  <span>Confirm Reservation</span>
+                  <span class="btn-check">✓</span>
+                </button>
+
+                <button type="button" class="btn btn-whatsapp-alt btn-block" id="bookViaWhatsAppBtn">
+                  <span>💬 Pre-fill & Send via WhatsApp</span>
+                </button>
+              </div>
+
+              <div class="form-disclaimer">
+                🔒 Your details are 100% confidential. No payment required until your appointment is concluded.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Appointment Success Modal -->
+    <div class="confirmation-modal" id="confirmationModal" aria-hidden="true" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-gold-border">
+          <div class="modal-content">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+            <div class="modal-icon-badge">✓</div>
+            <h3 class="modal-title">Appointment Confirmed!</h3>
+            <p class="modal-subtitle">We look forward to hosting you at The Crown & Blade lounge.</p>
+            
+            <div class="modal-summary" id="modalSummary">
+              <!-- Dynamically populated via main.js -->
+            </div>
+
+            <div class="modal-actions">
+              <button class="btn btn-gold btn-block" id="modalDoneBtn">Done</button>
+              <button class="btn btn-whatsapp btn-block" id="modalWhatsAppShareBtn">
+                💬 Send Confirmation to WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         CONTACT & LOCATION SECTION
+         ============================================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">FIND OUR SANCTUARY</span>
+          <h2 class="section-title">Contact & <span class="gold-gradient-text">Location</span></h2>
+          <div class="section-gold-line"></div>
+          <p class="section-subtitle">
+            Centrally positioned in the downtown district with convenient private parking and valet service.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Details Cards -->
+          <div class="contact-cards-col">
+            
+            <div class="contact-card">
+              <div class="contact-icon-wrap">📍</div>
+              <div class="contact-info">
+                <h4>Our Studio Address</h4>
+                <p>128 Grand Boulevard, Suite 400<br>Downtown Financial District, NY 10005</p>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="contact-link">Get Driving Directions ↗</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon-wrap">📞</div>
+              <div class="contact-info">
+                <h4>Direct Phone & Bookings</h4>
+                <p>Front Desk: <a href="tel:+1234567890" class="contact-link-inline">+1 (234) 567-890</a></p>
+                <p>WhatsApp Concierge: <a href="https://wa.me/1234567890" class="contact-link-inline">+1 (234) 567-890</a></p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon-wrap">✉️</div>
+              <div class="contact-info">
+                <h4>Email Inquiries</h4>
+                <p>concierge@crownandbladebarbers.com</p>
+                <p>management@crownandbladebarbers.com</p>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon-wrap">🕒</div>
+              <div class="contact-info">
+                <h4>Hours of Operation</h4>
+                <div class="hours-row"><span>Monday – Friday:</span> <strong>9:00 AM – 8:00 PM</strong></div>
+                <div class="hours-row"><span>Saturday:</span> <strong>8:30 AM – 7:00 PM</strong></div>
+                <div class="hours-row"><span>Sunday:</span> <strong>10:00 AM – 5:00 PM</strong></div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Google Maps Section -->
+          <div class="map-container-col">
+            <div class="map-frame">
+              <div class="map-gold-header">
+                <span class="map-dot"></span>
+                <span class="map-header-title">THE CROWN & BLADE GROOMING LOUNGE</span>
+                <span class="map-tag">GPS: 40.7061° N, 74.0092° W</span>
+              </div>
+              
+              <!-- Embedded Google Map -->
+              <div class="google-map-embed">
+                <iframe 
+                  title="Crown & Blade Barbershop Location Map"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.3638210940384!2d-74.01185382343949!3d40.70564613768222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a165bed0055%3A0x6e8e81e9bbfb9f1!2sWall%20St%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                  width="100%" 
+                  height="100%" 
+                  style="border:0;" 
+                  allowfullscreen="" 
+                  loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+
+              <!-- Map Quick Floating Bar -->
+              <div class="map-bottom-bar">
+                <div class="map-address-text">
+                  <strong>The Crown & Blade</strong> • 128 Grand Blvd Suite 400
+                </div>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold-sm">
+                  Open in Maps ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================
+       FOOTER
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      
+      <!-- Footer Col 1: Brand Info -->
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <div class="logo-symbol">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="6" cy="6" r="3"></circle>
+              <circle cx="6" cy="18" r="3"></circle>
+              <line x1="20" y1="4" x2="8.12" y2="15.88"></line>
+              <line x1="14.47" y1="14.48" x2="20" y2="20"></line>
+              <line x1="8.12" y1="8.12" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <span class="logo-title">CROWN & BLADE</span>
+        </div>
+        <p class="footer-desc">
+          A bespoke haven for the modern gentleman. Precision scissor craftsmanship, razor-sharp fades, and traditional grooming in an uncompromising dark & gold ambiance.
+        </p>
+        <div class="footer-social-links">
+          <a href="#" class="social-icon" aria-label="Instagram">IG</a>
+          <a href="#" class="social-icon" aria-label="Facebook">FB</a>
+          <a href="#" class="social-icon" aria-label="TikTok">TK</a>
+          <a href="#" class="social-icon" aria-label="YouTube">YT</a>
+        </div>
+      </div>
+
+      <!-- Footer Col 2: Quick Links -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Our Heritage</a></li>
+          <li><a href="#barbers">Master Barbers</a></li>
+          <li><a href="#gallery">Studio Lookbook</a></li>
+          <li><a href="#pricing">Price Menu</a></li>
+          <li><a href="#booking">Book Appointment</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 3: Services Summary -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Signature Services</h4>
+        <ul class="footer-links">
+          <li><a href="#services">Master Skin Fade & Lineup</a></li>
+          <li><a href="#services">Gentleman's Signature Cut</a></li>
+          <li><a href="#services">Royal Hot Towel Shave</a></li>
+          <li><a href="#services">Beard Sculpt & Detailing</a></li>
+          <li><a href="#services">The Crown Executive Package</a></li>
+          <li><a href="#services">Charcoal Facial Therapy</a></li>
+        </ul>
+      </div>
+
+      <!-- Footer Col 4: Hours & Booking CTA -->
+      <div class="footer-col">
+        <h4 class="footer-col-title">Bookings & Hours</h4>
+        <p class="footer-hours-info">
+          Open 7 Days a week.<br>
+          Mon - Fri: 9am - 8pm<br>
+          Sat: 8:30am - 7pm<br>
+          Sun: 10am - 5pm
+        </p>
+        <a href="#booking" class="btn btn-gold btn-block footer-book-btn">Book Appointment</a>
+      </div>
+
+    </div>
+
+    <!-- Footer Bottom Line -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-content">
+        <p>&copy; <span id="currentYear"></span> The Crown & Blade Barbershop. All rights reserved.</p>
+        <p class="footer-sub-text">Bespoke Grooming & Artisanal Hair Care • Dark Gold Signature Edition</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       FLOATING WHATSAPP BUTTON (ALWAYS ACCESSIBLE)
+       ============================================== -->
+  <a href="https://wa.me/1234567890?text=Hello%20Crown%20%26%20Blade%2C%20I%20would%20like%20to%20inquire%20about%20booking%20an%20appointment." 
+     target="_blank" 
+     rel="noopener noreferrer" 
+     class="floating-whatsapp-btn" 
+     id="floatingWhatsApp"
+     aria-label="Book on WhatsApp">
+    <div class="whatsapp-btn-pulse"></div>
+    <span class="whatsapp-btn-icon">💬</span>
+    <span class="whatsapp-tooltip">Chat & Book Instantly</span>
+  </a>
+
+  <!-- ==============================================
+       FLOATING BACK-TO-TOP BUTTON
+       ============================================== -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- ==============================================
+       JAVASCRIPT
+       ============================================== -->
+  <script src="js/main.js"></script>
+</body>
+</html>
