@@ -8,7 +8,7 @@
 
 The Crown & Blade is a responsive, single-page barbershop website. It presents services, barbers, prices, a photo gallery, customer reviews, contact details, and an appointment inquiry flow in a dark-and-gold visual style.
 
-**[Open the live site](https://mustaqeem29.github.io/Barber_fronted_sample_website/)** · **[View the source](https://github.com/Mustaqeem29/Barber_fronted_sample_website)**
+**[Open the live site](https://barberfrontedsite.vercel.app/)** · **[View the source](https://github.com/Mustaqeem29/Barber_fronted_sample_website)**
 
 > The appointment form currently runs in the browser only; it does not store bookings or send confirmations to a booking system. The displayed business contact details and WhatsApp number are sample values. Replace them with real business information before using the site for customers.
 
